@@ -12,6 +12,17 @@ export function Routes (){
     <NavigationContainer>
       <Stack.Navigator initialRouteName="home">
         <Stack.Screen name="home" component={Home}
+        options ={{
+          title: "Shopper - Sua lista de Compras",
+          headerStyle:{
+            backgroundColor:"#00FFFF"
+          },
+          headerTintColor: "#182F4B",
+          headerTitleStyle: {
+            fontWeight: 'bold'
+          }
+
+        }}
         />
         <Stack.Screen name="login" component={Login} 
         />

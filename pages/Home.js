@@ -10,9 +10,17 @@ const Home = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <View>
-                <TouchableOpacity  style={styles.button} onPress={() => handleLoginSelect('Iniciar')}>
-                    <Text style={styles.buttonText}>Iniciar Sessão</Text>
-                </TouchableOpacity>
+                <View style={styles.title}>
+                  <Text style={styles.text_title}>Shopper</Text>
+                </View>
+                <View style={styles.imageArea}>
+
+                </View>
+                <View style={styles.buttonArea}>
+                  <TouchableOpacity  style={styles.button} onPress={() => handleLoginSelect('Iniciar')}>
+                      <Text style={styles.buttonText}>Iniciar Sessão</Text>
+                  </TouchableOpacity>
+                </View>
             </View>
         </View>
     
@@ -23,19 +31,40 @@ const Home = ({ navigation }) => {
     const styles = StyleSheet.create({
         container: {
           flex: 1,
-          backgroundColor: '#182F4B',
-          alignItems: 'center',
-          padding: 16
+          backgroundColor: "#182F4B",
+          alignItems: "center"
+        },
+        imageArea:{
+          flex: 1
+
+        },
+        buttonArea:{
+          marginBottom: 50,
+          backgroundColor: "#00FFFF",
+          borderRadius: 30
         },
         button: {
-          marginTop: 500,
           alignItems: "center",
+          padding: 10
 
         },
         buttonText:{
           fontSize: 24,
-          color: "#1E1E1E",
-          fontWeight: "bold"
+          color: "#182F4B",
+          fontWeight: "bold",
+          fontFamily: "sans-serif-condensed"
+          
+        },
+        title:{
+          marginTop: 40,
+          alignItems: "center"
+    
+        },
+        text_title:{
+          color:"#FFFFFF",
+          fontSize: 42,
+          fontWeight: "bold",
+          fontFamily: "sans-serif-condensed"
 
         }
       });
