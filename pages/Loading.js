@@ -1,28 +1,57 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import {Image} from 'react-native';
 
 
-export default function App() {     
-  return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Shopper</Text>
-    </View>
-  );
-}
+const Loading = ({ navigation }) => {
+    const handleLoginSelect = (userLogin) => {
+      navigation.navigate('login', { userLogin });
+    };
 
-const styles = StyleSheet.create({  
-  container: {
-    flex: 1,
-    backgroundColor: '#182F4B',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  text:{
-    color: '#B7EFEC',
-    fontSize: 48,
-    fontFamily: 'sans-serif-medium',
-    flex: 1,
-    marginTop: 80,
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
-});
+
+    return (
+        <View style={styles.container}>
+            <View>
+                <View style={styles.title}>
+                  <Text style={styles.text_title}>Shopper</Text>
+                </View>
+                <View style={styles.column_logo}>
+                  <Image source ={require('../assets/logo.png')} style={styles.logo}/> 
+                </View>
+            </View>
+        </View>
+    
+      );
+    };
+
+
+    const styles = StyleSheet.create({
+        container: {
+          flex: 1,
+          backgroundColor: "#182F4B",
+          alignItems: "center"
+        },
+        title:{
+          marginTop: 40,
+          alignItems: "center",
+          padding: 10
+        },
+        text_title:{
+          color:"#FFFFFF",
+          fontSize: 48,
+          fontWeight: "bold",
+          fontFamily: "sans-serif-condensed"
+        },
+        column_logo: {
+          flex: 1,
+          flexDirection: "row",
+          alignItems: "center",
+          marginBottom: 50
+        },
+        logo:{
+          width: 200,
+          height:200
+          
+        }
+      });
+      
+export default Loading ;

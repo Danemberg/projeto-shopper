@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import {Image} from 'react-native';
 
 
 const Home = ({ navigation }) => {
@@ -13,8 +14,8 @@ const Home = ({ navigation }) => {
                 <View style={styles.title}>
                   <Text style={styles.text_title}>Shopper</Text>
                 </View>
-                <View style={styles.imageArea}>
-
+                <View style={styles.column_logo}>
+                  <Image source ={require('../assets/logo.png')} style={styles.logo}/> 
                 </View>
                 <View style={styles.buttonArea}>
                   <TouchableOpacity  style={styles.button} onPress={() => handleLoginSelect('Iniciar')}>
@@ -34,10 +35,6 @@ const Home = ({ navigation }) => {
           backgroundColor: "#182F4B",
           alignItems: "center"
         },
-        imageArea:{
-          flex: 1
-
-        },
         buttonArea:{
           marginBottom: 50,
           backgroundColor: "#00FFFF",
@@ -46,26 +43,35 @@ const Home = ({ navigation }) => {
         button: {
           alignItems: "center",
           padding: 10
-
         },
         buttonText:{
           fontSize: 24,
           color: "#182F4B",
           fontWeight: "bold",
-          fontFamily: "sans-serif-condensed"
-          
+          fontFamily: "sans-serif-condensed"       
         },
         title:{
           marginTop: 40,
-          alignItems: "center"
-    
+          alignItems: "center",
+          padding: 10
         },
         text_title:{
           color:"#FFFFFF",
-          fontSize: 42,
+          fontSize: 48,
           fontWeight: "bold",
           fontFamily: "sans-serif-condensed"
-
+        },
+        column_logo: {
+          flex: 1,
+          flexDirection: "row",
+          alignItems: "center",
+          marginBottom: 50
+      
+        },
+        logo:{
+          width: 200,
+          height:200
+          
         }
       });
       

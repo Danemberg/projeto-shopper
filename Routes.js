@@ -19,7 +19,9 @@ export function Routes (){
           },
           headerTintColor: "#182F4B",
           headerTitleStyle: {
-            fontWeight: 'bold'
+            fontWeight: 'bold',
+            fontFamily: "sans-serif-condensed"
+
           }
 
         }}
