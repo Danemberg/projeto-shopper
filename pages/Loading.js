@@ -33,13 +33,14 @@ const Loading = ({ navigation }) => {
         title:{
           marginTop: 40,
           alignItems: "center",
-          padding: 10
+          padding: 10,
+          transform: [{ translateY: 5 }, { rotate: '-5deg' }], // Altera a posição e a rotação
         },
         text_title:{
           color:"#FFFFFF",
-          fontSize: 48,
+          fontSize: 52,
           fontWeight: "bold",
-          fontFamily: "sans-serif-condensed"
+          fontFamily: "sans-serif-condensed" 
         },
         column_logo: {
           flex: 1,
